@@ -1,0 +1,23 @@
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+integrations:
+  github:
+    url: https://api.github.com
+
+async:
+  maxThreadPoolSize: 12
+  timeout: 10
+  unit: SECONDS
+
+logging:
+  level:
+    root: INFO
+
+spring:
+  mvc:
+    throwExceptionIfNoHandlerFound: true
