@@ -7,8 +7,7 @@ To get started with the project, clone the repository to your local machine. Not
 On the ASAP TODO list:
 - security
 - integration tests 
-- adding more unit tests 
-- swagger
+- adding more unit tests
 - docker
 
 ## Technical Stack Used
@@ -50,7 +49,8 @@ The project can be configured by editing the application.yaml file located in th
 ## API
 This application does not support GUI as of date. It exposes 1 API under the following url: `/users/{userName}/account-activity`. Aforementioned service serves a list of user repositories. It supports pagination, which is configurable via optionable RequestParam `pageNumber`. 
 
- 
+## Swagger
+Swagger ui is available on `http://localhost:8080/swagger-ui/index.html#`.
 
 
 ## Contributing
