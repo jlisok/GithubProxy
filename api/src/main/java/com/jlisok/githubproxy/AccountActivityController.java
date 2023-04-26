@@ -5,6 +5,7 @@ import com.jlisok.githubproxy.facades.GithubAccountFacade;
 import com.jlisok.githubproxy.pagination.PaginationModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +22,7 @@ public class AccountActivityController {
             path = USER_ACCOUNT_ACTIVITY,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public PaginationModel<AccountActivityModel> getAccountActivity(@PathVariable String name,
+    public PaginationModel<AccountActivityModel> getAccountActivity(@NonNull @PathVariable String name,
                                                                     @RequestParam(required = false) Integer pageNumber) {
 
         return facade.getAccountActivity(name, pageNumber);
