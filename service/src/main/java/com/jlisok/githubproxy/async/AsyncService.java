@@ -24,8 +24,11 @@ public class AsyncService {
     }
 
     private <T> Map<String, List<T>> getAsync(Function<String, List<T>> function, AsyncLinkRequest request) {
-        return request.parameters().stream()
+        var futures = request.parameters().stream()
                 .map(parameter -> supply(function, parameter))
+                .toList();
+
+        return futures.stream()
                 .map(CompletableFuture::join)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
