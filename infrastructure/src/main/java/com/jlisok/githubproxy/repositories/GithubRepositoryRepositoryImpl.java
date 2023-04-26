@@ -35,8 +35,8 @@ public class GithubRepositoryRepositoryImpl implements GithubRepositoryRepositor
         }
 
         var response = client.getGithubRepositories(request.getSearchCriteria(), request.isForkType(), request.getPageSize(), request.getPageNumber())
-                .orElseThrow(() -> new GithubProxyException(ExceptionCode.OBJECT_NOT_FOUND, HttpURLConnection.HTTP_NOT_FOUND,
-                        REPOSITORIES_NOT_FOUND));
+                .filter(item -> item.getTotalCount() > 0)
+                .orElseThrow(() -> new GithubProxyException(ExceptionCode.OBJECT_NOT_FOUND, HttpURLConnection.HTTP_NOT_FOUND, REPOSITORIES_NOT_FOUND));
 
         if (response.getIncompleteResults() != null && response.getIncompleteResults()) {
             throw new GithubProxyException(ExceptionCode.GITHUB_API_EXCEPTION, HttpURLConnection.HTTP_UNAVAILABLE, GITHUB_UNAVAILABLE);

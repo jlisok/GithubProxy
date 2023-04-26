@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class GithubRepositorySearchResult implements GithubRepositorySearchData 
     private List<GithubRepositoryResult> repositories;
 
     @Override
+    @Transient
     public List<GithubRepositoryResultData> getRepositoryData() {
         return new ArrayList<>(repositories);
     }

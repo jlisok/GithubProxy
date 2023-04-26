@@ -6,7 +6,7 @@ To get started with the project, clone the repository to your local machine. Not
 
 On the ASAP TODO list:
 - security
-- integration tests 
+- add more integration tests 
 - adding more unit tests
 - docker
 
