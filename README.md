@@ -8,7 +8,7 @@ On the ASAP TODO list:
 - security
 - add more integration tests 
 - adding more unit tests
-- docker
+- enhance dockerfile 
 
 ## Technical Stack Used
 
@@ -38,10 +38,13 @@ mvn clean install
 ```
 
 This will compile the project and create an executable JAR file in the target/ directory.
+To run dockerfile, execute docker build / docker run commands. e.g.:
 
-For now, it is advices to run the project using IDE of your choice for test purposes. No contenerization support added so far.
-
-After starting the server, application is available at `http://localhost:8080`.
+```bash
+docker build -t app .
+docker run -p 8080:8080 app
+```
+After starting the server, application is available on `http://localhost:8080`.
 
 ## Configuration
 The project can be configured by editing the application.yaml file located in the app/src/main/resources/application.yaml directory.
