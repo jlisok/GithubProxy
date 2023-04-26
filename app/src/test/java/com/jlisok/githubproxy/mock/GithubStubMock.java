@@ -7,7 +7,6 @@ import com.jlisok.githubproxy.branches.GithubBranch;
 import com.jlisok.githubproxy.repositories.GithubRepositorySearchResult;
 import com.jlisok.githubproxy.util.GithubResponseCreator;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -19,8 +18,7 @@ import static com.jlisok.githubproxy.clients.GithubClientConstants.GET_REPOSITOR
 @Component
 @RequiredArgsConstructor
 public class GithubStubMock {
-    @Autowired
-    private ObjectMapper mapper;
+    private final ObjectMapper mapper;
 
     public GithubRepositorySearchResult stubRepositoryResponse() throws JsonProcessingException {
         var testRepository = GithubResponseCreator.getGithubRepositorySearchResult().totalCount(1).build();
