@@ -6,8 +6,8 @@ import com.jlisok.githubproxy.pagination.PagedData;
 import com.jlisok.githubproxy.pagination.PaginationModel;
 import com.jlisok.githubproxy.repositories.RepositoryModel;
 import com.jlisok.githubproxy.repositories.assemblers.GithubRepositoryAssembler;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryOwnerData;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryOwnerData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
 import com.jlisok.githubproxy.repositories.util.CollectionUtil;
 import com.jlisok.githubproxy.users.GithubUserAssembler;
 import com.jlisok.githubproxy.users.UserModel;
@@ -33,7 +33,6 @@ public class GithubAccountAssembler {
                 pagedRepositories.getData(),
                 item -> repositoryAssembler.toRepositoryModel(item, branchesByRepositoryNames)
         );
-
 
         return new PaginationModel<>(
                 pagedRepositories.hasNext(),

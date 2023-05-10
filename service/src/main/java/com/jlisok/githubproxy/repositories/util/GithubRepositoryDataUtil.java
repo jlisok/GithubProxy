@@ -1,7 +1,7 @@
 package com.jlisok.githubproxy.repositories.util;
 
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryOwnerData;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryOwnerData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
 import jakarta.annotation.Nullable;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Component;

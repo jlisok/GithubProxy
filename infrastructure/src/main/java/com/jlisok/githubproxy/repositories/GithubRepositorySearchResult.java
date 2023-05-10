@@ -1,8 +1,8 @@
 package com.jlisok.githubproxy.repositories;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositorySearchData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositorySearchData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

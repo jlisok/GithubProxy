@@ -13,22 +13,22 @@
         <dependency>
             <groupId>com.jlisok.githubproxy</groupId>
             <artifactId>api</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jlisok.githubproxy</groupId>
             <artifactId>model</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jlisok.githubproxy</groupId>
             <artifactId>service</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jlisok.githubproxy</groupId>
             <artifactId>infrastructure</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
 
         <dependency>
