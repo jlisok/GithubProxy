@@ -1,7 +1,7 @@
 package com.jlisok.githubproxy;
 
+import com.jlisok.githubproxy.config.GithubStubMock;
 import com.jlisok.githubproxy.exceptions.ExceptionMessageConstants;
-import com.jlisok.githubproxy.mock.GithubStubMock;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ class AccountActivityIntegrationTest {
     private GithubStubMock stub;
 
     @Test
-    void getAccountActivity_exampleIntegrationTest() throws Exception {
+    void getAccountActivity_whenIntegrationSuccessful_thenReturnValidResponse() throws Exception {
         //given
         var userName = RandomStringUtils.randomAlphabetic(10);
 
@@ -40,8 +40,7 @@ class AccountActivityIntegrationTest {
         var testBranch = stub.stubBranchResponse(repository.getName(), userName);
 
         //when // then
-        mvc.perform(MockMvcRequestBuilders.get(USER_ACCOUNT_ACTIVITY, userName)
-                        .contentType(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get(USER_ACCOUNT_ACTIVITY, userName).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("hasNext", Matchers.equalTo(false)))
                 .andExpect(jsonPath("pageNumber", Matchers.equalTo(1)))
@@ -60,7 +59,7 @@ class AccountActivityIntegrationTest {
     }
 
     @Test
-    void getAccountActivity_stub503() throws Exception {
+    void getAccountActivity_whenIntegrationThrows503_thenReturnGithubApiException() throws Exception {
         //given
         var userName = RandomStringUtils.randomAlphabetic(10);
 
@@ -74,7 +73,7 @@ class AccountActivityIntegrationTest {
     }
 
     @Test
-    void getAccountActivity_stub404() throws Exception {
+    void getAccountActivity_whenIntegrationThrows404_thenReturnNotFoundResponse() throws Exception {
         //given
         var userName = RandomStringUtils.randomAlphabetic(10);
 
@@ -88,7 +87,7 @@ class AccountActivityIntegrationTest {
     }
 
     @Test
-    void getAccountActivity_stub400() throws Exception {
+    void getAccountActivity_whenIntegrationThrows400_thenReturnBadRequestResponse() throws Exception {
         //given
         var userName = RandomStringUtils.randomAlphabetic(10);
 

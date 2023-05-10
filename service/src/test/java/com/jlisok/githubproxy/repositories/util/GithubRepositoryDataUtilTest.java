@@ -1,6 +1,6 @@
 package com.jlisok.githubproxy.repositories.util;
 
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
 import com.jlisok.githubproxy.repositories.util.data.TestGithubRepositoryResult;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;

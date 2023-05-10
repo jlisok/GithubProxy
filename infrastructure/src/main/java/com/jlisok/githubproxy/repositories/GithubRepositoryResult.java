@@ -1,6 +1,6 @@
 package com.jlisok.githubproxy.repositories;
 
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
