@@ -2,8 +2,8 @@ package com.jlisok.githubproxy.repositories.services;
 
 import com.jlisok.githubproxy.pagination.PagedData;
 import com.jlisok.githubproxy.repositories.assemblers.GithubRepositoryAssembler;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryRepository;
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryResultData;
+import com.jlisok.githubproxy.repositories.contracts.GithubRepositoryRepository;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryResultData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.jlisok.githubproxy.mock;
+package com.jlisok.githubproxy.config;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

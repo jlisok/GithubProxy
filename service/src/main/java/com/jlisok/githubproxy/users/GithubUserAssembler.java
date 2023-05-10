@@ -1,6 +1,6 @@
 package com.jlisok.githubproxy.users;
 
-import com.jlisok.githubproxy.repositories.constracts.GithubRepositoryOwnerData;
+import com.jlisok.githubproxy.repositories.contracts.data.GithubRepositoryOwnerData;
 import org.springframework.stereotype.Component;
 
 @Component
