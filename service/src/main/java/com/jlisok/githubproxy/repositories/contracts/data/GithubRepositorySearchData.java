@@ -1,4 +1,4 @@
-package com.jlisok.githubproxy.repositories.constracts;
+package com.jlisok.githubproxy.repositories.contracts.data;
 
 import java.util.List;
 
